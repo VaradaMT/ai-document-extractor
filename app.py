@@ -1,5 +1,6 @@
 import streamlit as st
-from extractor import extract_text_from_pdf, detect_key_value_pairs, save_to_excel
+from extractor import extract_text_from_pdf, extract_key_value_pairs, save_to_excel
+
 
 st.title("AI Document Structuring Tool")
 
@@ -15,3 +16,4 @@ if uploaded_file:
 
     st.success("Extraction completed!")
     st.download_button("Download Excel", open(output_file, "rb"), file_name="Output.xlsx")
+
